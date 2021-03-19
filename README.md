@@ -1,3 +1,9 @@
+# Author
+
+Name: Mateo Perez
+Codigo: 201814723
+Email: mateoperez0508@gmail.com
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
