@@ -9,6 +9,8 @@ jobs:
   hello_world_job:
     runs-on: ubuntu-18.04
     steps:
+      - name: date
+        run: date
       - name: Say hello
         run: |
           echo "Hello ISIS3710"
