@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 const PokemonList = ({ pokemonList }) => {
   return (
     <>
-      <h1 className="title">Pokemons</h1>
-      <div className="list-container">
+      <h1 className='title'>Pokemons</h1>
+      <div className='list-container'>
         {pokemonList.map(({ id, name }) => (
-          <Link key={id} className="list-item" style={{ backgroundImage: `url(${`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`})` }}>
+          <Link key={id} className='list-item' style={{ backgroundImage: `url(${`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`})` }}>
             <div
-              className="list-item-name"
+              className='list-item-name'
             >
               {name}
             </div>
@@ -22,7 +22,7 @@ const PokemonList = ({ pokemonList }) => {
 };
 
 PokemonList.PropTypes = {
-  pokemonList : PropTypes.array.isRequired
+  pokemonList: PropTypes.array.isRequired
 };
 
 export default PokemonList;
