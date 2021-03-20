@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - master
-    pull_request:
+
+  pull_request:
     branches: [master]
     types: [opened, synchronize]
 
@@ -16,11 +17,18 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: npm install 
-        run: npm install  
+      - name: npm install
+        run: npm install
       - name: lint
         run: npm run eslint
       - name: Build
-        run: npm run build  
-      
-      
+        run: npm run build
+  deploy:
+    runs-on: ubuntu-18.04
+    if: github.ref == '.git/refs/heads/master'
+    steps:
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: 'gitacionspai' #Must be unique in Heroku
+          heroku_email: 'mateoperez0508@gmail.com'
