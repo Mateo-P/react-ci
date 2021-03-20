@@ -6,6 +6,7 @@ import ErrorMessage from './ErrorMessage';
 import PokemonList from './PokemonList';
 
 //const unused = {};
+//just tu make a PR
 const mapResults = (({ results }) => results.map(({ url, name }) => ({
   url,
   name,
